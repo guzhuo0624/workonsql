@@ -1,0 +1,6 @@
+Name: Zhuo Gu
+Student Number: 1000047068
+Commants for assignment:
+	MRU policy: At the beginning of it, I thought it is not hard to implement it, so I just insert page after the position of head, and update the new page to be head. Therefore, the algorithm just keeps changing head. But it always came up with a error that out of buffer when I use a small buffer size. I was confused by this error, then I figured out that I did not actually remove the old head out of buffer, because it is still unavailable for replacement. So after I changed the position of head, I have to find a way to delete the old head. Then I fixed it.
+
+	LFU policy: The diffcult part for this policy is that how to attach a new count value and update it for each buffer. So I decided to create a new class to store the value of use time for each buffer, and I use a list to store these values.After I can find the use time for each buffer, I just insert it into right position according to LFU policy. But the problem shows up that where I should increase value of use time for buffer that exists in BufferDescriptors. Then I decided to use a bool value to determine that if I found the buffer in list or not. Therefore, the problem is solved.

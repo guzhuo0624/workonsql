@@ -1,0 +1,5 @@
+Name: Zhuo Gu
+Utorid: guzhuo
+Student #: 1000047068
+
+	It is not too hard to find out how the hash join works in sql, but the problem happens when I tried to estimate the number of tuples in relations. Firstly, I tried to look at the structure of node, then I figure out that each node have a plan structure, it helps you to estimate the number of rows in relation.
